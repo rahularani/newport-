@@ -9,13 +9,13 @@ export default function About() {
       <motion.div
         initial="hidden" whileInView="show" viewport={{ once: true }}
         variants={{ show: { transition: { staggerChildren: 0.15 } } }}
-        style={{ display: "flex", gap: "80px", flexWrap: "wrap", alignItems: "flex-start" }}>
+        style={{ display: "flex", gap: "60px", flexWrap: "wrap", alignItems: "flex-start" }}>
 
-        <motion.div variants={fadeUp} style={{ flex: 1, minWidth: "280px" }}>
+        <motion.div variants={fadeUp} style={{ flex: 1, minWidth: "260px" }}>
           <p style={{ fontSize: "0.72rem", letterSpacing: "3px", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "12px" }}>
             — About Me
           </p>
-          <h2 style={{ fontSize: "2.4rem", fontWeight: "800", color: "#222222", marginBottom: "24px" }}>
+          <h2 style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: "800", color: "#222222", marginBottom: "20px" }}>
             I design solutions,<br />not just code.
           </h2>
           <p style={{ color: "#7B7B7B", lineHeight: 1.9, fontSize: "0.95rem", marginBottom: "16px" }}>
@@ -32,11 +32,11 @@ export default function About() {
           </p>
         </motion.div>
 
-        <motion.div variants={fadeUp} style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+        <motion.div variants={fadeUp} style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "24px", justifyContent: "center" }}>
           {[{ num: "3+", label: "Real-World Projects" }, { num: "2+", label: "AI/ML Systems Built" }, { num: "5+", label: "Tech Stacks" }].map(s => (
-            <div key={s.label} style={{ textAlign: "center" }}>
-              <p style={{ fontSize: "3rem", fontWeight: "900", color: "#222222", lineHeight: 1 }}>{s.num}</p>
-              <p style={{ fontSize: "0.72rem", color: "#7B7B7B", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>{s.label}</p>
+            <div key={s.label} style={{ textAlign: "center", minWidth: "100px" }}>
+              <p style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: "900", color: "#222222", lineHeight: 1 }}>{s.num}</p>
+              <p style={{ fontSize: "0.68rem", color: "#7B7B7B", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>{s.label}</p>
             </div>
           ))}
         </motion.div>

@@ -12,16 +12,46 @@ export default function Hero() {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      padding: "0 8%",
-      paddingTop: "80px",
+      padding: "100px 8% 60px",
     }}>
-      {/* Vertical label */}
+      <style>{`
+        .hero-img {
+          position: absolute;
+          right: 8%;
+          bottom: 0;
+          height: 88%;
+          width: auto;
+          z-index: 2;
+        }
+        .hero-content { max-width: 55%; z-index: 3; position: relative; }
+        .hero-hello {
+          position: absolute; bottom: 8%; left: 7%;
+          font-size: clamp(70px, 14vw, 160px);
+          font-weight: 800; color: rgba(34,34,34,0.05);
+          line-height: 1; letter-spacing: -4px; z-index: 1; user-select: none;
+        }
+        @media (max-width: 768px) {
+          .hero-img {
+            position: relative; right: auto; bottom: auto;
+            width: 70%; max-width: 280px; height: auto;
+            display: block; margin: 32px auto 0;
+          }
+          .hero-content { max-width: 100%; }
+          .hero-hello { font-size: 80px; bottom: 4%; left: 4%; }
+        }
+        @media (max-width: 480px) {
+          .hero-img { width: 80%; max-width: 240px; }
+          .hero-hello { font-size: 56px; }
+        }
+      `}</style>
+
+      {/* Vertical label — hide on mobile */}
       <div style={{
-        position: "absolute", left: "20px", top: "50%",
+        position: "absolute", left: "16px", top: "50%",
         transform: "translateY(-50%) rotate(-90deg)",
-        fontSize: "0.65rem", letterSpacing: "3px",
+        fontSize: "0.6rem", letterSpacing: "3px",
         textTransform: "uppercase", color: "#7B7B7B", whiteSpace: "nowrap",
-      }}>
+      }} className="desktop-only">
         Portfolio Website
       </div>
 
@@ -30,10 +60,10 @@ export default function Hero() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
-        style={{ position: "absolute", top: "120px", left: "8%", display: "flex", gap: "40px" }}>
+        style={{ display: "flex", gap: "32px", marginBottom: "24px" }}>
         {[{ num: "+3", label: "Real-world Projects" }, { num: "+5", label: "Tech Stacks" }].map(s => (
           <div key={s.label}>
-            <p style={{ fontSize: "1.6rem", fontWeight: "700", color: "#222222" }}>{s.num}</p>
+            <p style={{ fontSize: "clamp(1.2rem, 3vw, 1.6rem)", fontWeight: "700", color: "#222222" }}>{s.num}</p>
             <p style={{ fontSize: "0.72rem", color: "#7B7B7B", marginTop: "2px" }}>{s.label}</p>
           </div>
         ))}
@@ -41,78 +71,61 @@ export default function Hero() {
 
       {/* Main text */}
       <motion.div
+        className="hero-content"
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.5, duration: 0.7 }}
-        style={{ maxWidth: "55%", zIndex: 3 }}>
-        <p style={{ fontSize: "0.75rem", letterSpacing: "3px", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "16px" }}>
+        transition={{ delay: 0.5, duration: 0.7 }}>
+        <p style={{ fontSize: "0.72rem", letterSpacing: "3px", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "12px" }}>
           — Information Technology Student
         </p>
         <h1 style={{
-          fontSize: "clamp(1.8rem, 4vw, 3.2rem)", fontWeight: "800",
-          color: "#222222", lineHeight: 1.2, marginBottom: "20px",
+          fontSize: "clamp(1.6rem, 4vw, 3.2rem)", fontWeight: "800",
+          color: "#222222", lineHeight: 1.2, marginBottom: "16px",
         }}>
           Building Intelligent Digital Experiences that Solve Real-World Problems
         </h1>
-        <p style={{ color: "#7B7B7B", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "36px", maxWidth: "480px" }}>
+        <p style={{ color: "#7B7B7B", fontSize: "clamp(0.85rem, 2vw, 0.95rem)", lineHeight: 1.8, marginBottom: "28px" }}>
           I'm Rahul R, an IT student passionate about crafting scalable applications,
           AI-driven solutions, and impactful user experiences.
         </p>
-
-        <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
           <a href="#portfolio" style={{
             background: "#222222", color: "#fff",
-            padding: "13px 28px", borderRadius: "6px",
+            padding: "12px 24px", borderRadius: "6px",
             fontSize: "0.82rem", fontWeight: "600",
-          }}>
-            View My Work
-          </a>
+          }}>View My Work</a>
           <a href="/resume.pdf" download style={{
             background: "#F8F8F8", color: "#222222",
             border: "1px solid #ebebeb",
-            padding: "13px 28px", borderRadius: "6px",
+            padding: "12px 24px", borderRadius: "6px",
             fontSize: "0.82rem", fontWeight: "600",
-          }}>
-            Download Resume ↓
-          </a>
+          }}>Download Resume ↓</a>
         </div>
       </motion.div>
 
       {/* Big Hello bg text */}
-      <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 1 }}
-        style={{
-          position: "absolute", bottom: "8%", left: "7%",
-          fontSize: "clamp(80px, 14vw, 160px)",
-          fontWeight: "800", color: "rgba(34,34,34,0.06)",
-          lineHeight: 1, letterSpacing: "-4px", zIndex: 1,
-          userSelect: "none",
-        }}>
-        Hello
-      </motion.h1>
+      <h1 className="hero-hello">Hello</h1>
 
       {/* Photo */}
       <motion.img
         src={rahulImg}
         alt="Rahul R"
+        className="hero-img"
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        style={{
-          position: "absolute", right: "8%", bottom: 0,
-          height: "90%", width: "auto", zIndex: 2,
-        }}
       />
 
-      {/* Scroll down */}
       <div style={{
-        position: "absolute", bottom: "32px", left: "8%",
+        position: "absolute", bottom: "24px", left: "8%",
         fontSize: "0.72rem", color: "#7B7B7B", letterSpacing: "1px", zIndex: 3,
       }}>
         Scroll down ↓
       </div>
+
+      <style>{`
+        @media (max-width: 768px) { .desktop-only { display: none; } }
+      `}</style>
     </section>
   );
 }

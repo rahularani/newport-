@@ -11,13 +11,17 @@ body {
   background: #F8F8F8;
   color: #222222;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+a { text-decoration: none; color: inherit; }
+
+section { padding: 60px 8%; }
+
+@media (max-width: 768px) {
+  section { padding: 50px 5%; }
 }
 
-section {
-  padding: 80px 8%;
+@media (max-width: 480px) {
+  section { padding: 40px 4%; }
 }
