@@ -1,8 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const pool = require("./db");
-require("dotenv").config();
+const db = require("./db");
 
 const app = express();
 
@@ -23,16 +23,23 @@ if (process.env.NODE_ENV === "production") {
 // Init DB table and start server
 async function start() {
   try {
-    await pool.query(`
-      CREATE TABLE IF NOT EXISTS messages (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(100) NOT NULL,
-        email VARCHAR(100) NOT NULL,
-        message TEXT NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      )
-    `);
-    console.log("PostgreSQL connected & table ready");
+    const createTable = db.isPostgres
+      ? `CREATE TABLE IF NOT EXISTS messages (
+          id SERIAL PRIMARY KEY,
+          name VARCHAR(100) NOT NULL,
+          email VARCHAR(100) NOT NULL,
+          message TEXT NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )`
+      : `CREATE TABLE IF NOT EXISTS messages (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          name VARCHAR(100) NOT NULL,
+          email VARCHAR(100) NOT NULL,
+          message TEXT NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )`;
+    await db.query(createTable);
+    console.log(`${db.isPostgres ? "PostgreSQL" : "MySQL"} connected & table ready`);
     app.listen(process.env.PORT || 5000, () =>
       console.log(`Server running on port ${process.env.PORT || 5000}`)
     );

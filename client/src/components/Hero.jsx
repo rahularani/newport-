@@ -4,7 +4,7 @@ import rahulImg from "../assets/rahul.png";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       {/* Stats */}
       <motion.div className="hero-stats"
         initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}
@@ -34,13 +34,6 @@ export default function Hero() {
           <a href="/resume.pdf" download className="hero-btn-secondary">Download Resume ↓</a>
         </div>
       </motion.div>
-
-      {/* Big bg text */}
-      <motion.p className="hero-hello"
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 1 }}>
-        Hello
-      </motion.p>
 
       {/* Photo */}
       <motion.img src={rahulImg} alt="Rahul R" className="hero-img"
