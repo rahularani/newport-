@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -27,48 +26,25 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="portfolio" style={{ background: "#F8F8F8" }}>
-      <p style={{ fontSize: "0.72rem", letterSpacing: "3px", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "12px" }}>
-        — Portfolio
-      </p>
-      <h2 style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: "800", color: "#222222", marginBottom: "40px" }}>
-        Featured Projects
-      </h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+    <section id="portfolio" className="section" style={{ background: "#F8F8F8" }}>
+      <p className="section-label">— Portfolio</p>
+      <h2 className="section-title">Featured Projects</h2>
+      <div>
         {projects.map((p, i) => (
-          <motion.div key={p.title}
+          <motion.div key={p.title} className="project-card"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.15, duration: 0.6 }}
-            style={{
-              background: "#FFFFFF", border: "1px solid #ebebeb",
-              borderRadius: "12px", overflow: "hidden",
-              display: "flex", flexWrap: "wrap",
-            }}>
-            <div style={{ width: "6px", background: p.bg, flexShrink: 0 }} />
-            <div style={{ flex: 1, padding: "clamp(16px, 4vw, 32px)", minWidth: "0" }}>
-              <div style={{ marginBottom: "12px" }}>
-                <span style={{
-                  fontSize: "0.65rem", letterSpacing: "2px", textTransform: "uppercase",
-                  color: "#7B7B7B", background: "#F8F8F8", border: "1px solid #ebebeb",
-                  padding: "4px 12px", borderRadius: "20px",
-                }}>
-                  {p.tag}
-                </span>
-                <h3 style={{ fontSize: "clamp(1rem, 2.5vw, 1.3rem)", fontWeight: "800", color: "#222222", marginTop: "10px" }}>{p.title}</h3>
-                <p style={{ fontSize: "0.82rem", color: "#7B7B7B", marginTop: "2px" }}>{p.subtitle}</p>
-              </div>
-              <p style={{ color: "#555", fontSize: "clamp(0.82rem, 2vw, 0.9rem)", lineHeight: 1.8, marginBottom: "12px" }}>{p.desc}</p>
-              <p style={{ fontSize: "0.82rem", color: "#222222", fontStyle: "italic", marginBottom: "16px" }}>💡 {p.impact}</p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                {p.tech.map(t => (
-                  <span key={t} style={{
-                    background: "#F8F8F8", border: "1px solid #ebebeb",
-                    padding: "4px 12px", borderRadius: "20px",
-                    fontSize: "0.75rem", color: "#222222",
-                  }}>{t}</span>
-                ))}
+            transition={{ delay: i * 0.15, duration: 0.6 }}>
+            <div className="project-bar" style={{ background: p.bg }} />
+            <div className="project-body">
+              <span className="project-tag">{p.tag}</span>
+              <h3 className="project-title">{p.title}</h3>
+              <p className="project-subtitle">{p.subtitle}</p>
+              <p className="project-desc">{p.desc}</p>
+              <p className="project-impact">💡 {p.impact}</p>
+              <div className="project-techs">
+                {p.tech.map(t => <span key={t} className="project-tech">{t}</span>)}
               </div>
             </div>
           </motion.div>

@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const categories = [
@@ -11,35 +10,23 @@ const categories = [
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ background: "#FFFFFF" }}>
-      <p style={{ fontSize: "0.72rem", letterSpacing: "3px", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "12px" }}>
-        — Expertise
-      </p>
-      <h2 style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: "800", color: "#222222", marginBottom: "40px" }}>
-        Skills & Tech Stack
-      </h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "20px" }}>
+    <section id="skills" className="section" style={{ background: "#FFFFFF" }}>
+      <p className="section-label">— Expertise</p>
+      <h2 className="section-title">Skills & Tech Stack</h2>
+      <div className="skills-grid">
         {categories.map((cat, i) => (
-          <motion.div key={cat.title}
+          <motion.div key={cat.title} className="skill-card"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1, duration: 0.5 }}
-            style={{
-              background: "#F8F8F8", border: "1px solid #ebebeb",
-              borderRadius: "10px", padding: "20px",
-            }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "2px", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "14px" }}>
-              {cat.title}
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-              {cat.items.map(item => (
-                <div key={item} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#222222", flexShrink: 0 }} />
-                  <span style={{ fontSize: "0.85rem", color: "#222222" }}>{item}</span>
-                </div>
-              ))}
-            </div>
+            transition={{ delay: i * 0.1, duration: 0.5 }}>
+            <p className="skill-card-title">{cat.title}</p>
+            {cat.items.map(item => (
+              <div key={item} className="skill-item">
+                <span className="skill-dot" />
+                <span className="skill-name">{item}</span>
+              </div>
+            ))}
           </motion.div>
         ))}
       </div>

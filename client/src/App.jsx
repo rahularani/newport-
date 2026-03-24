@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -19,11 +18,7 @@ export default function App() {
       <Journey />
       <Banner />
       <Contact />
-      <footer style={{
-        background: "#222222", color: "#7B7B7B",
-        textAlign: "center", padding: "32px 8%",
-        fontSize: "0.82rem", letterSpacing: "1px",
-      }}>
+      <footer className="footer">
         rahulramesharani@gmail.com &nbsp;|&nbsp; © {new Date().getFullYear()} Rahul R. All rights reserved.
       </footer>
     </>
