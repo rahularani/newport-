@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const Message = require("../models/Message");
+const pool = require("../db");
 
 // POST /api/contact
 router.post("/", async (req, res) => {
   try {
     const { name, email, message } = req.body;
-    const newMessage = new Message({ name, email, message });
-    await newMessage.save();
+    await pool.execute(
+      "INSERT INTO messages (name, email, message) VALUES (?, ?, ?)",
+      [name, email, message]
+    );
     res.status(201).json({ success: true, message: "Message sent!" });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
