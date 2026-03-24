@@ -6,8 +6,8 @@ const pool = require("../db");
 router.post("/", async (req, res) => {
   try {
     const { name, email, message } = req.body;
-    await pool.execute(
-      "INSERT INTO messages (name, email, message) VALUES (?, ?, ?)",
+    await pool.query(
+      "INSERT INTO messages (name, email, message) VALUES ($1, $2, $3)",
       [name, email, message]
     );
     res.status(201).json({ success: true, message: "Message sent!" });

@@ -23,16 +23,16 @@ if (process.env.NODE_ENV === "production") {
 // Init DB table and start server
 async function start() {
   try {
-    await pool.execute(`
+    await pool.query(`
       CREATE TABLE IF NOT EXISTS messages (
-        id INT AUTO_INCREMENT PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
         email VARCHAR(100) NOT NULL,
         message TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `);
-    console.log("MySQL connected & table ready");
+    console.log("PostgreSQL connected & table ready");
     app.listen(process.env.PORT || 5000, () =>
       console.log(`Server running on port ${process.env.PORT || 5000}`)
     );
