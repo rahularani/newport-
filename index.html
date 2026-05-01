@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul R | React Developer Portfolio</title>
+    <meta name="description" content="IT student and React developer building real-world apps like AgriBot AI, Diabetes Prediction, and more.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/webp" href="potrait.webp">
+    <meta property="og:image" content="potrait.webp">
+</head>
+<body>
+    <!-- Animated Background Graph Grid -->
+    <div class="bg-grid"></div>
+
+    <!-- New Brutalist Hero Section -->
+    <div class="hero-wrapper" id="home">
+        <!-- Background Image -->
+        <div class="hero-bg">
+            <img src="potrait.webp" alt="Background Portrait" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Top Right Socials -->
+        <div class="hero-top-right">
+            <a href="mailto:rahulramesharani@gmail.com" class="social-link">Mail</a>
+            <a href="https://instagram.com/r_a_h_u_l_ram_" target="_blank" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Vimeo</a>
+        </div>
+
+        <!-- Giant Typography -->
+        <div class="hero-center">
+            <h1 class="massive-text" aria-label="Rahul R">
+                <span class="word"><span class="inner">RAHUL R</span></span><br>
+                <span class="word"><span class="inner">REACT</span></span><br>
+                <span class="word"><span class="inner">DEVELOPER</span></span>
+            </h1>
+        </div>
+
+        <!-- Bottom Left Text -->
+        <div class="hero-bottom-left">
+            <p>I am a React developer from Tamil Nadu<br>building web apps using Firebase<br>and modern JavaScript.</p>
+        </div>
+
+        <!-- Bottom Right Navigation -->
+        <div class="hero-bottom-right">
+            <nav class="vertical-nav">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#services" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#process" class="nav-item">Process</a>
+                <a href="#tools" class="nav-item">Tools</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services section reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Skills</h2>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card glass-card">
+                    <div class="card-accent-line"></div>
+                    <div class="service-icon gradient-box">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3 class="service-title">Website Building</h3>
+                    <p class="service-desc">Business websites that convert visitors into customers</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle-2"></i> Responsive Design</li>
+                        <li><i data-lucide="check-circle-2"></i> SEO Optimized</li>
+                        <li><i data-lucide="check-circle-2"></i> Fast Loading</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card glass-card">
+                    <div class="card-accent-line"></div>
+                    <div class="service-icon gradient-box">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3 class="service-title">SaaS Websites</h3>
+                    <p class="service-desc">Modern SaaS landing pages that drive sign-ups</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle-2"></i> Conversion Focused</li>
+                        <li><i data-lucide="check-circle-2"></i> API Integration</li>
+                        <li><i data-lucide="check-circle-2"></i> Dashboard Design</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card glass-card">
+                    <div class="card-accent-line"></div>
+                    <div class="service-icon gradient-box">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="service-title">Graphic Design</h3>
+                    <p class="service-desc">Eye-catching visuals that tell your brand story</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle-2"></i> Brand Identity</li>
+                        <li><i data-lucide="check-circle-2"></i> Marketing Assets</li>
+                        <li><i data-lucide="check-circle-2"></i> Print & Digital</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="service-card glass-card">
+                    <div class="card-accent-line"></div>
+                    <div class="service-icon gradient-box">
+                        <i data-lucide="hash"></i>
+                    </div>
+                    <h3 class="service-title">Social Media Branding</h3>
+                    <p class="service-desc">Cohesive social media presence that builds community</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check-circle-2"></i> Content Templates</li>
+                        <li><i data-lucide="check-circle-2"></i> Brand Guidelines</li>
+                        <li><i data-lucide="check-circle-2"></i> Strategy Consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Marquee -->
+    <section id="tools" class="tools section reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Tools I Use to Accelerate Results</h2>
+        </div>
+        
+        <div class="marquee-wrapper">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- Tool Items -->
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" alt="Canva"></div>
+                        <span class="tool-name">Canva</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma"></div>
+                        <span class="tool-name">Figma</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/nextdotjs/white" alt="Next.js"></div>
+                        <span class="tool-name">Next.js</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"></div>
+                        <span class="tool-name">React</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
+                        <span class="tool-name">Node.js</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/n8n/EA436D" alt="n8n"></div>
+                        <span class="tool-name">n8n</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"></div>
+                        <span class="tool-name">TypeScript</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/tailwindcss/38B2AC" alt="Tailwind CSS"></div>
+                        <span class="tool-name">Tailwind</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/framer/0055FF" alt="Framer"></div>
+                        <span class="tool-name">Framer</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop"></div>
+                        <span class="tool-name">Photoshop</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/vercel/white" alt="Vercel"></div>
+                        <span class="tool-name">Vercel</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase"></div>
+                        <span class="tool-name">Firebase</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase"></div>
+                        <span class="tool-name">Supabase</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/razorpay/3395FF" alt="Razorpay"></div>
+                        <span class="tool-name">Razorpay</span>
+                    </div>
+                </div>
+                <!-- Duplicate for seamless scroll -->
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" alt="Canva"></div>
+                        <span class="tool-name">Canva</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma"></div>
+                        <span class="tool-name">Figma</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/nextdotjs/white" alt="Next.js"></div>
+                        <span class="tool-name">Next.js</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"></div>
+                        <span class="tool-name">React</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
+                        <span class="tool-name">Node.js</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/n8n/EA436D" alt="n8n"></div>
+                        <span class="tool-name">n8n</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"></div>
+                        <span class="tool-name">TypeScript</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/tailwindcss/38B2AC" alt="Tailwind CSS"></div>
+                        <span class="tool-name">Tailwind</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/framer/0055FF" alt="Framer"></div>
+                        <span class="tool-name">Framer</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop"></div>
+                        <span class="tool-name">Photoshop</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/vercel/white" alt="Vercel"></div>
+                        <span class="tool-name">Vercel</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase"></div>
+                        <span class="tool-name">Firebase</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase"></div>
+                        <span class="tool-name">Supabase</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><img src="https://cdn.simpleicons.org/razorpay/3395FF" alt="Razorpay"></div>
+                        <span class="tool-name">Razorpay</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section id="process" class="process section reveal">
+        <div class="container">
+            <h2 class="section-title text-center">My Working Process</h2>
+            
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-circle">01</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Discovery & Research</h3>
+                        <p>Understanding your vision, goals, and target audience</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-circle">02</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Strategy & Planning</h3>
+                        <p>Crafting a tailored roadmap with scope and timeline</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-circle">03</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Design & Development</h3>
+                        <p>Bringing ideas to life with iterative design</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-circle">04</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Launch & Support</h3>
+                        <p>Smooth deployment and ongoing support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section id="projects" class="portfolio section reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Projects</h2>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card glass-card">
+                    <div class="portfolio-img" style="background: linear-gradient(45deg, #667EEA, #764BA2)">
+                        <i data-lucide="monitor" class="portfolio-icon"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web Design</span>
+                        <h3>SaaS Landing Page</h3>
+                        <p>High-converting landing page for a B2B software tool.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card glass-card">
+                    <div class="portfolio-img" style="background: linear-gradient(45deg, #F093FB, #F5576C)">
+                        <i data-lucide="aperture" class="portfolio-icon"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Branding</span>
+                        <h3>E-commerce Brand Identity</h3>
+                        <p>Complete visual identity and brand guidelines.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card glass-card">
+                    <div class="portfolio-img" style="background: linear-gradient(45deg, #4FACFE, #00F2FE)">
+                        <i data-lucide="share-2" class="portfolio-icon"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Social Media</span>
+                        <h3>Social Media Campaign</h3>
+                        <p>Engaging templates and assets for Instagram & Twitter.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card glass-card">
+                    <div class="portfolio-img" style="background: linear-gradient(45deg, #43E97B, #38F9D7)">
+                        <i data-lucide="code" class="portfolio-icon"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Development</span>
+                        <h3>Business Website</h3>
+                        <p>Fast, SEO-optimized company website built from scratch.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 btn-container">
+                <a href="#contact" class="btn btn-primary">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Contact</h2>
+            
+            <div class="contact-layout">
+                <!-- Left: Contact Cards -->
+                <div class="contact-cards">
+                    <div class="contact-card glass-card" onclick="copyEmail()">
+                        <div class="contact-icon">
+                            <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail" style="width: 24px; height: 24px; object-fit: contain;">
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p id="email-address">rahulramesharani@gmail.com</p>
+                            <span class="contact-action">Click to copy</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919677823318" target="_blank" class="contact-card glass-card whatsapp-card">
+                        <div class="contact-icon whatsapp-icon">
+                            <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" style="width: 24px; height: 24px; object-fit: contain;">
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>+91 96778 23318</p>
+                            <span class="contact-action whatsapp-action">Chat Now</span>
+                        </div>
+                    </a>
+                    
+                    <div class="contact-card glass-card response-card">
+                        <div class="contact-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Response Time</h3>
+                            <p>Within 24 hours</p>
+                            <span class="contact-badge success-badge">Available</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Contact Form -->
+                <div class="contact-form-wrapper glass-card">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <div class="select-wrapper">
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Select a service...</option>
+                                    <option value="Website Building">Website Building</option>
+                                    <option value="SaaS Website">SaaS Website</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option value="Social Media">Social Media</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-full submit-btn">
+                            Send Message <i data-lucide="send" class="icon-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">Creator<span class="dot">.</span></a>
+                <p>Transforming ideas into digital excellence</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <div class="f-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                    <a href="agribot-ai.html">Blog</a>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/919677823318" target="_blank" aria-label="WhatsApp">
+                        <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" style="width: 20px; height: 20px; object-fit: contain;">
+                    </a>
+                    <a href="mailto:rahulramesharani@gmail.com" aria-label="Gmail">
+                        <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail" style="width: 20px; height: 20px; object-fit: contain;">
+                    </a>
+                    <a href="https://instagram.com/r_a_h_u_l_ram_" target="_blank" aria-label="Instagram">
+                        <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" style="width: 20px; height: 20px; object-fit: contain;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 Creator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919677823318" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" style="width: 35px; height: 35px; object-fit: contain;">
+    </a>
+
+    <!-- Toast Notification (for copy email) -->
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
